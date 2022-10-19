@@ -1,0 +1,20 @@
+<div class="container">
+    <table class="table">
+        <thead>
+            <th>Physical_condition</th>
+            <th>Value</th>
+            <th>Temperature</th>
+            <th>Humidity</th>
+            <th>Luminosity</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of ps">
+                <td>{{p.Physical_condition}}</td>
+                <td>{{p.Value}}</td>
+                <td>{{p.Temperature}}</td>
+                <td>{{p.Humidity}}</td>
+                <td>{{p.Luminosity}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
