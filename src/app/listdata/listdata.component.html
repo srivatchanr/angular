@@ -1,20 +1,28 @@
-<div class="container">
-    <table class="table">
-        <thead>
-            <th>Physical_condition</th>
-            <th>Value</th>
-            <th>Temperature</th>
-            <th>Humidity</th>
-            <th>Luminosity</th>
-        </thead>
-        <tbody>
-            <tr *ngFor="let p of ps">
-                <td>{{p.Physical_condition}}</td>
-                <td>{{p.Value}}</td>
-                <td>{{p.Temperature}}</td>
-                <td>{{p.Humidity}}</td>
-                <td>{{p.Luminosity}}</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="listdata.component.css">
+    </head>
+    <body>
+        <div class="container">
+            <table class="table">
+                <thead>
+                    <th>Physical_condition</th>
+                    <th>Value</th>
+                    <th>Temperature</th>
+                    <th>Humidity</th>
+                    <th>Luminosity</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let p of ps">
+                        <td>{{p[0]}}</td>
+                        <td>{{p[1]}}</td>
+                        <td>{{p[2]}}</td>
+                        <td>{{p[3]}}</td>
+                        <td>{{p[4]}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

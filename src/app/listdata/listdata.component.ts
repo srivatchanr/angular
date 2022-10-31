@@ -11,6 +11,7 @@ import {Subscription} from 'rxjs';
   styleUrls: ['./listdata.component.css']
 })
 export class ListdataComponent implements OnInit {
+[x: string]: any;
   ps:any;
   psdata: Subscription = new Subscription;
 
@@ -19,11 +20,9 @@ export class ListdataComponent implements OnInit {
   ngOnInit(): void {
     this.psdata=this.plantservice.listdata()
     .subscribe(r=>{
-      this.ps=r;})
-    /*this.plants=this.plantservice.listdata()
-    .subscribe((data:any)=>{
-      this.plants=data;
-    })*/
+      this.ps=r;
+      console.log(this.ps);
+    })
   }
   ngOnDestroy() {
     this.psdata.unsubscribe();
